@@ -2,6 +2,15 @@ import java.util.Scanner;
 
 public class SistemaGestorEstudiante{
     public static void main(String[] args) throws Exception {
+        /**
+         * gestion a "GestorEstudiantes" type object initialized
+         * 
+         * s a "Scanner" type object initialized
+         * 
+         * Main method that calls other methods for the program to run.
+         * 
+         * s.close closer the scanner
+         */
         GestorEstudiantes gestion = new GestorEstudiantes();
         Scanner s = new Scanner(System.in);
         menu(gestion);

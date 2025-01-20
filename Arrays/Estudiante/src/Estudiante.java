@@ -5,24 +5,43 @@ public class Estudiante{
     /**
      * I declared three variables that are the atributes of the class
      * 
-     * A string instance named "nombre" where it stores the name of the student
+     * nombre A string instance named "nombre" where it stores the name of the student
      * 
-     * An int instance named "cantidadNotas" where it stores the quantity of grades that have been assigned to a student
+     * cantidadNotas An int instance named "cantidadNotas" where it stores the quantity of grades that have been assigned to a student
+     * 
+     * arrayNotas An array of int instance named "arrayNotas" where it stores the grades of the student
      */
     private String nombre;
     private int cantidadNotas;
     private double[] arrayNotas;
 
+    /**
+     * The constructor of the class Estudiante, where it inicialized "cantidadNotas" with 0 
+     * and "arrayNotas" with a size of 10
+     * 
+     * @param nombre The name of the student
+     */
     public Estudiante(String nombre){
         this.nombre = nombre;
         cantidadNotas = 0;
         arrayNotas = new double[10];
     }
 
+    /**
+     * THis is a method that get the name of the student
+     * 
+     * @return The name of the student
+     */
     public String getNombre(){
         return this.nombre;
     }
 
+    /**
+     * This method inserts a mark in the array of marks taking as position on the array the quantity 
+     * of marks that the student has
+     * 
+     * @param nota The mark that the student has
+     */
     public void agregarNotas(double nota){
         try{
             arrayNotas[cantidadNotas] = nota;
@@ -32,6 +51,11 @@ public class Estudiante{
         }
     }
 
+    /**
+     * This method calculate the average mark of the student
+     * 
+     * @return The average mark of the student
+     */
     public double calcularPromedio(){
         double promedio = 0;
         try{
@@ -44,6 +68,9 @@ public class Estudiante{
         }
     }
 
+    /**
+     * This method makes a String preformated for the object "Estudiante"
+     */
     public String toString(){
         String cadenaRetorno = "";
         cadenaRetorno += "Estudiante[nombre=" + nombre + ";notas=";
